@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Gallery | Desi Pizza{% endblock %}
+{% block content %}
+
+<section class="gallery-page">
+<h1>Our Pizza Gallery</h1>
+<p>Take a look at some of our delicious pizzas.</p>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+    <img src="{{ url_for('static',filename='Paneer tikka pizza.jpg') }}" alt="Paneer Tikka Pizza">
+<h3>Masala Tikka Pizza</h3>
+</div>
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Butter Paneer Pizza.jpg') }}" alt="Butter Paneer Pizza">
+<h3>Butter Paneer Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Chilly Paneer Pizza.jpg') }}" alt="Chilli Paneer Pizza">
+<h3>Chilli Paneer Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Mughlai Chicken Pizza.jpg') }}" alt="Mughlai Chicken Pizza">
+<h3>Mughlai Chicken Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='BBQ chicken Pizza.jpg') }}" alt="BBQ Chicken Pizza">
+<h3>BBQ Chicken Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Masala Tikka Pizza.jpg') }}" alt="Masala Tikka Pizza">
+<h3>Masala Tikka Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Mix Vegetarian Pizza.jpeg') }}" alt="Mix Vegetarian Pizza">
+<h3>Mix Vegetarian Pizza</h3>
+</div>
+
+<div class="gallery-item">
+<img src="{{ url_for('static',filename='Vege Supreme Pizza.jpg') }}" alt="Veggie Supreme Pizza">
+<h3>Veggie Supreme Pizza</h3>
+</div>
+
+</div>
+</section>
+
+{% endblock %}
