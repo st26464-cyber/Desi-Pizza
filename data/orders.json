@@ -1,0 +1,246 @@
+[
+    {
+        "order_id": 1,
+        "customer_name": "Manvir",
+        "pizza": "Tandoori Chicken",
+        "size": "Large",
+        "addons": [
+            "Extra Cheese"
+        ],
+        "total": 25
+    },
+    {
+        "name": "manvir",
+        "phone": "1234567890",
+        "address": "flatbush",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Mughlai Chicken Pizza",
+                "price": 12,
+                "size": "Small"
+            }
+        ],
+        "total": 12.0
+    },
+    {
+        "name": "mani",
+        "phone": "12345",
+        "address": "home",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Hawaiian Pizza",
+                "price": 25.99,
+                "size": "Large"
+            }
+        ],
+        "total": 25.99
+    },
+    {
+        "name": "ekam",
+        "phone": "1234567890",
+        "address": "Mission Heights",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "French Fries",
+                "price": 5.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Chilli Paneer Pizza",
+                "price": 18,
+                "size": "Large"
+            },
+            {
+                "pizza": "BBQ Chicken Pizza",
+                "price": 19,
+                "size": "Large"
+            },
+            {
+                "pizza": "Red Bull",
+                "price": 5.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Garlic Bread",
+                "price": 6.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Paneer Tikka Pizza",
+                "price": 18,
+                "size": "Large"
+            }
+        ],
+        "total": 71.0
+    },
+    {
+        "name": "Ranjot",
+        "phone": "98121289",
+        "address": "Papakura",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Hawaiian Pizza",
+                "price": 22.99,
+                "size": "Medium"
+            },
+            {
+                "pizza": "Red Bull",
+                "price": 5.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Cheesy Bites",
+                "price": 7.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Paneer Tikka Pizza",
+                "price": 18,
+                "size": "Large"
+            }
+        ],
+        "total": 52.989999999999995
+    },
+    {
+        "name": "ekam",
+        "phone": "233",
+        "address": "home",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Mughlai Chicken Pizza",
+                "price": 20,
+                "size": "Large"
+            }
+        ],
+        "total": 20.0
+    },
+    {
+        "name": "123",
+        "phone": "3141",
+        "address": "home stret",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Paneer Tikka Pizza",
+                "price": 12,
+                "size": "Small"
+            }
+        ],
+        "total": 12.0
+    },
+    {
+        "name": "manvir",
+        "phone": "1342354",
+        "address": "home",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Mughlai Chicken Pizza",
+                "price": 20,
+                "size": "Large"
+            },
+            {
+                "pizza": "Tandoori Chicken",
+                "price": 26.99,
+                "size": "Large"
+            },
+            {
+                "pizza": "Red Bull",
+                "price": 5.0,
+                "size": "Regular"
+            },
+            {
+                "pizza": "Cheesy Bites",
+                "price": 7.0,
+                "size": "Regular"
+            }
+        ],
+        "total": 58.989999999999995
+    },
+    {
+        "name": "mani",
+        "phone": "1234567",
+        "address": "ormiston senior college",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Mughlai Chicken Pizza",
+                "price": 12,
+                "size": "Small"
+            },
+            {
+                "pizza": "Veggie Supreme Pizza",
+                "price": 11,
+                "size": "Small"
+            },
+            {
+                "pizza": "Butter Paneer Pizza",
+                "price": 12,
+                "size": "Small"
+            }
+        ],
+        "total": 35.0
+    },
+    {
+        "name": "Ekam",
+        "phone": "2345987",
+        "address": "Waka Pod OSC",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Paneer Tikka Pizza",
+                "price": 12,
+                "size": "Small"
+            },
+            {
+                "pizza": "Margherita Pizza",
+                "price": 16.99,
+                "size": "Small"
+            },
+            {
+                "pizza": "Margherita Pizza",
+                "price": 16.99,
+                "size": "Small"
+            },
+            {
+                "pizza": "Tandoori Chicken",
+                "price": 15.99,
+                "size": "Small"
+            }
+        ],
+        "total": 61.97
+    },
+    {
+        "name": "mani",
+        "phone": "234567890",
+        "address": "WAKA",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Paneer Tikka Pizza",
+                "price": 18,
+                "size": "Large"
+            }
+        ],
+        "total": 18.0
+    },
+    {
+        "name": "mani",
+        "phone": "1234456789",
+        "address": "Ngahere",
+        "payment": "Card",
+        "orders": [
+            {
+                "pizza": "Mughlai Chicken Pizza",
+                "price": 12,
+                "size": "Small"
+            }
+        ],
+        "total": 12.0
+    }
+]
