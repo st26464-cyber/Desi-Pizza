@@ -1,0 +1,116 @@
+{
+  "Paneer Tikka Pizza": {
+    "description": "Spicy paneer with capsicum, onion and cheese.",
+    "image": "Paneer tikka pizza.jpg",
+    "prices": {
+      "Small": 12,
+      "Medium": 15,
+      "Large": 18
+    }
+  },
+  "Mughlai Chicken Pizza": {
+    "description": "Chicken with creamy Mughlai spices and cheese.",
+    "image": "Mughlai Chicken Pizza.jpg",
+    "prices": {
+      "Small": 12,
+      "Medium": 16,
+      "Large": 20
+    }
+  },
+  "Veggie Supreme Pizza": {
+    "description": "Fresh vegetables, capsicum, onion and cheese.",
+    "image": "Vege Supreme Pizza.jpg",
+    "prices": {
+      "Small": 11,
+      "Medium": 14,
+      "Large": 17
+    }
+  },
+  "Butter Paneer Pizza": {
+    "description": "Creamy butter paneer with Indian spices and cheese.",
+    "image": "Butter Paneer Pizza.jpg",
+    "prices": {
+      "Small": 12,
+      "Medium": 15,
+      "Large": 19
+    }
+  },
+  "Chilli Paneer Pizza": {
+    "description": "Chilli paneer with capsicum, onion and spicy sauce.",
+    "image": "Chilly Paneer Pizza.jpg",
+    "prices": {
+      "Small": 11,
+      "Medium": 14,
+      "Large": 18
+    }
+  },
+  "BBQ Chicken Pizza": {
+    "description": "BBQ chicken with onion and melted cheese.",
+    "image": "BBQ chicken Pizza.jpg",
+    "prices": {
+      "Small": 12,
+      "Medium": 15,
+      "Large": 19
+    }
+  },
+  "Pepperoni Pizza": {
+    "description": "Classic pepperoni pizza with melted cheese and tomato sauce.",
+    "image": "Pepperoni Pizza.jpg",
+    "prices": {
+        "Small": 18.99,
+        "Medium": 21.99,
+        "Large": 24.99
+    }
+},
+
+"Margherita Pizza": {
+    "description": "Classic pizza with tomato sauce, mozzarella and fresh basil.",
+    "image": "Margherita Pizza.jpg",
+    "prices": {
+        "Small": 16.99,
+        "Medium": 19.99,
+        "Large": 22.99
+    }
+},
+
+"Meat Lovers Pizza": {
+    "description": "Loaded with delicious meat toppings and melted cheese.",
+    "image": "Meat lovers Pizza.jpg",
+    "prices": {
+        "Small": 21.99,
+        "Medium": 24.99,
+        "Large": 27.99
+    }
+},
+
+"Hawaiian Pizza": {
+    "description": "A classic combination of ham, pineapple and melted cheese.",
+    "image": "Hawaiian-Pizza.jpg",
+    "prices": {
+        "Small": 19.99,
+        "Medium": 22.99,
+        "Large": 25.99
+    }
+},
+"Tandoori Chicken": {
+    "description": "Juicy tandoori chicken, capsicum, onions and melted mozzarella cheese.",
+    "image": "images/tandoori chicken pizza.jpg",
+    "prices": {
+        "Small": 15.99,
+        "Medium": 21.99,
+        "Large": 26.99
+    },
+    "stock": 10
+},
+
+"Sweet Corn": {
+    "description": "Sweet corn, fresh capsicum, onions and creamy melted mozzarella cheese.",
+    "image": "images/Sweet corn and Cheese pizza.jpg",
+    "prices": {
+        "Small": 12.99,
+        "Medium": 17.99,
+        "Large": 22.99
+    },
+    "stock": 10
+}
+}
