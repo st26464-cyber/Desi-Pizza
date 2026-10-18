@@ -1,0 +1,90 @@
+﻿{% extends "base.html" %}
+{% block title %}Desi Pizza | Home{% endblock %}
+{% block content %}
+
+
+<section class="home-hero">
+
+    <div class="hero-content">
+        <p class="hero-tag">FRESH · HOT · DESI</p>
+
+        <h1>
+            TASTE THE
+            <span>DESI</span>
+            DIFFERENCE.
+        </h1>
+
+        <p class="hero-description">
+            Fresh ingredients. Bold Desi flavours.
+            Pizzas made with love.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{{ url_for('menu') }}" class="hero-btn">
+                ORDER NOW →
+            </a>
+
+            <a href="{{ url_for('menu') }}"
+               class="hero-btn hero-btn-outline">
+                VIEW MENU
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img
+            src="{{ url_for('static', filename='images/pizza.jpg') }}"
+            alt="Delicious Desi Paneer Pizza">
+    </div>
+
+</section>
+
+<section class="pizzas">
+    <h2>Popular Pizzas</h2>
+    <p class="sub">Choose your favourite pizza</p>
+
+    <div class="pizza-grid">
+
+
+    <div class="pizza-card">
+        <img src="{{ url_for('static', filename='Margherita Pizza.jpg') }}" alt="Margherita Pizza">
+        <div class="pizza-info">
+            <h3>Margherita Pizza</h3>
+            <p>From $16.99</p>
+            <a href="{{ url_for('menu') }}" class="order-btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{{ url_for('static', filename='Meat lovers Pizza.jpg') }}" alt="Meat Lovers Pizza">
+        <div class="pizza-info">
+            <h3>Meat Lovers Pizza</h3>
+            <p>From $21.99</p>
+            <a href="{{ url_for('menu') }}" class="order-btn">Order Now</a>
+        </div>
+    </div>
+
+    <div class="pizza-card">
+        <img src="{{ url_for('static', filename='Hawaiian-Pizza.jpg') }}" alt="Hawaiian Pizza">
+        <div class="pizza-info">
+            <h3>Hawaiian Pizza</h3>
+            <p>From $19.99</p>
+            <a href="{{ url_for('menu') }}" class="order-btn">Order Now</a>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<section class="why">
+    <h2>Why Choose Desi Pizza?</h2>
+    <div class="features">
+        <div><h3>• Fresh Pizza</h3><p>Made fresh for every order.</p></div>
+        <div><h3>• Desi Flavours</h3><p>Indian flavours with a pizza twist.</p></div>
+        <div><h3>• Great Quality</h3><p>Quality ingredients and great taste.</p></div>
+    </div>
+</section>
+
+{% endblock %}
+
+
