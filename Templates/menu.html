@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="menu-page">
+    <h1>Our Menu</h1>
+    <p>Fresh, hot and full of Desi flavour 🍕</p>
+
+    {% for name, pizza in pizzas.items() %}
+        <div class="pizza-card">
+
+            <h2>{{ name }}</h2>
+             <img src="{{ url_for('static', filename=pizza.image) }}" 
+               alt="{{ name }}">
+            <p>{{ pizza.description }}</p>
+
+            <form action="{{ url_for('order') }}" method="POST">
+
+                <input type="hidden" name="pizza" value="{{ name }}">
+
+                <label for="size-{{ loop.index }}">Choose Size:</label>
+
+                <select name="size" id="size-{{ loop.index }}" required>
+                    <option value="Small">Small - ${{ pizza.prices.Small }}</option>
+                    <option value="Medium">Medium - ${{ pizza.prices.Medium }}</option>
+                    <option value="Large">Large - ${{ pizza.prices.Large }}</option>
+                </select>
+
+                <button type="submit">Order Now</button>
+
+            </form>
+
+        </div>
+
+        {% endfor %}
+        <h2 class="menu-title">🥤 Drinks</h2>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Coke.jpg') }}" alt="Coke">
+        <h2>Coke</h2>
+        <p>Cold and refreshing Coke.</p>
+        <p class="menu-price">$3.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Coke">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Sprite.jpg') }}" alt="Sprite">
+        <h2>Sprite</h2>
+        <p>Cold and refreshing Sprite.</p>
+        <p class="menu-price">$3.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Sprite">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Mango Lassi.jpg') }}" alt="Mango Lassi">
+        <h2>Mango Lassi</h2>
+        <p>Sweet and creamy mango lassi.</p>
+        <p class="menu-price">$5.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Mango Lassi">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Monster.jpg') }}" alt="Monster Drink">
+        <h2>Monster Drink</h2>
+        <p>Refreshing energy drink.</p>
+        <p class="menu-price">$5.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Monster Drink">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Red Bull.jpg') }}" alt="Red Bull">
+        <h2>Red Bull</h2>
+        <p>Refreshing energy drink.</p>
+        <p class="menu-price">$5.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Red Bull">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Pepsi.jpg') }}" alt="Pepsi">
+        <h2>Pepsi</h2>
+        <p>Refreshing cola drink.</p>
+        <p class="menu-price">$3.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Pepsi">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+
+        </form>
+    </div>
+    <!-- SNACKS -->
+
+    <h2 class="menu-title">🍟 Snacks</h2>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Samosa.jpg') }}" alt="Samosa">
+        <h2>Samosa</h2>
+        <p>Crispy samosa with a delicious filling.</p>
+        <p class="menu-price">$4.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Samosa">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+         <img src="{{ url_for('static', filename='images/Paneer Pakora.jpg') }}" alt="Paneer Pakora">
+        <h2>Paneer Pakora</h2>
+        <p>Crispy paneer pakora with Indian spices.</p>
+        <p class="menu-price">$7.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Paneer Pakora">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+    
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Garlic Bread.jpg') }}" alt="Garlic Bread">
+        <h2>Garlic Bread</h2>
+        <p>Fresh garlic bread with herbs.</p>
+        <p class="menu-price">$6.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Garlic Bread">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Cheesy Bites.jpg') }}" alt="Cheesy Bites">
+        <h2>Cheesy Bites</h2>
+        <p>Delicious cheesy bites.</p>
+        <p class="menu-price">$7.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Cheesy Bites">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/French Fries.jpg') }}" alt="French Fries">
+        <h2>French Fries</h2>
+        <p>Crispy golden French fries.</p>
+        <p class="menu-price">$5.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="French Fries">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+    <div class="menu-item">
+        <img src="{{ url_for('static', filename='images/Waffle Fries.jpg') }}" alt="Waffle Fries">
+        <h2>Waffle Fries</h2>
+        <p>Crispy waffle-cut fries.</p>
+        <p class="menu-price">$6.00</p>
+
+        <form action="{{ url_for('order') }}" method="POST">
+            <input type="hidden" name="pizza" value="Waffle Fries">
+            <input type="hidden" name="size" value="Regular">
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+
+</section>
+{% if request.args.get("ordered") %}
+<script>
+window.onload = function() {
+    let item = "{{ request.args.get('ordered') }}";
+
+    document.getElementById("order-popup").classList.add("show");
+    document.getElementById("popup-message").innerText = "✅ " + item + " added to cart successfully!";
+
+    setTimeout(function() {
+        document.getElementById("order-popup").classList.remove("show");
+    }, 2500);
+};
+</script>
+{% endif %}
+
+{% endblock %}
+
