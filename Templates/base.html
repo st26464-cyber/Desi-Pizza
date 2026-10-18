@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Desi Pizza{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="{{ url_for('index') }}" class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Desi Pizza">
+        </a>
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('menu') }}">Menu</a>
+            <a href="{{ url_for('hot_deals') }}">Hot Deals</a>
+            <a href="{{ url_for('gallery') }}">Gallery</a>
+            <a href="{{ url_for('order_history') }}" class="cart-icon"> 🛒 {% if session.get("orders") %} <span>{{ session.get("orders")|length }}</span> {% endif %} </a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>© 2026 Desi Pizza | Fresh • Hot • Desi</p>
+</footer>
+
+<div id="order-popup" class="popup" role="status">
+    <p id="popup-message"></p>
+</div>
+
+
+</body>
+</html>
