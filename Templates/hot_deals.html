@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hot Deals - Desi Pizza
+{% endblock %}
+
+{% block content %}
+
+<section class="hot-deals">
+
+    <div class="deals-heading">
+        <h1>Hot Deals</h1>
+        <p>Enjoy our special Desi Pizza combos at great prices.</p>
+    </div>
+
+    <div class="deals-grid">
+
+        <!-- Deal 1 -->
+        <div class="deal-card">
+            <h2>🔥 Butter Chicken Combo</h2>
+            <p>Medium BBQ Chicken Pizza</p>
+            <p>Garlic Bread + Coke/Sprite</p>
+
+            <div class="deal-price">
+                $24.99
+            </div>
+
+            <a href="{{ url_for('menu') }}" class="deal-btn">
+                Order Now
+            </a>
+        </div>
+
+        <!-- Deal 2 -->
+        <div class="deal-card">
+            <h2>🧀 Paneer Tikka Combo</h2>
+            <p>Medium Paneer Tikka Pizza</p>
+            <p>French Fries + Coke/Sprite</p>
+
+            <div class="deal-price">
+                $23.99
+            </div>
+
+            <a href="{{ url_for('menu') }}" class="deal-btn">
+                Order Now
+            </a>
+        </div>
+
+        <!-- Deal 3 -->
+        <div class="deal-card">
+            <h2>🍗 Chicken Tikka Deal</h2>
+            <p>Medium Meat Lovers Pizza</p>
+            <p>1 Cheesy Bites + Soft Drinks</p>
+
+            <div class="deal-price">
+                $29.99
+            </div>
+
+            <a href="{{ url_for('menu') }}" class="deal-btn">
+                Order Now
+            </a>
+        </div>
+
+        <!-- Deal 4 -->
+        <div class="deal-card">
+            <h2>🍕 Desi Family Deal</h2>
+            <p>2 Large Desi Pizzas</p>
+            <p>Garlic Bread + 4 Soft Drinks</p>
+
+            <div class="deal-price">
+                $59.99
+            </div>
+
+            <a href="{{ url_for('menu') }}" class="deal-btn">
+                Order Now
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
