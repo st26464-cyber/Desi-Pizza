@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Order History | Desi Pizza{% endblock %}
+
+{% block content %}
+
+<section class="order-history">
+
+    <h1>🛒 Your Cart</h1>
+    <p>Review your orders before checkout.</p>
+
+    {% if orders %}
+
+        {% for order in orders %}
+
+        <div class="order-card">
+
+            <div class="order-details">
+                <h2>{{ order.pizza }}</h2>
+                <p>Size: {{ order.size }}</p>
+            </div>
+
+            <p class="order-price">
+                Price: ${{ order.price }}
+            </p>
+
+            <form action="{{ url_for('remove_order', index=loop.index0) }}" method="POST">
+                <button type="submit" class="remove-btn">Remove</button>
+            </form>
+
+        </div>
+
+        {% endfor %}
+
+        <div class="cart-total">
+            <h2>Total: ${{ "%.2f"|format(orders | sum(attribute='price')) }}</h2>
+        </div>
+
+
+        <!-- CHECKOUT FORM -->
+
+        <div class="checkout-form">
+
+            <h2>🧾 Checkout</h2>
+
+            <form action="{{ url_for('place_order') }}" method="POST">
+
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+
+                <label>Phone Number</label>
+                <input type="text" name="phone" placeholder="Enter your phone number" required>
+
+                <label>Delivery Address</label>
+                <textarea name="address" placeholder="Enter your address" required></textarea>
+
+                <label>Payment Method</label>
+
+                <select name="payment" required>
+                    <option value="">Choose payment method</option>
+                    <option value="Cash">Cash</option>
+                    <option value="Card">Card</option>
+                </select>
+
+                <button type="submit" class="checkout-btn">
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
+    {% else %}
+
+        <p>No orders yet.</p>
+
+    {% endif %}
+
+</section>
+
+{% if request.args.get("ordered") %}
+<script>
+window.onload=function(){
+document.getElementById("order-popup").classList.add("show");
+document.getElementById("popup-message").innerText="🍕 Pizza ordered successfully!";
+
+setTimeout(function(){
+document.getElementById("order-popup").classList.remove("show");
+},2500);
+};
+</script>
+{%endif %}
+
+{% if request.args.get("removed") %}
+<script>
+window.onload = function() {
+    document.getElementById("order-popup").classList.add("show");
+    document.getElementById("popup-message").innerText = "🗑️ Item removed from cart!";
+
+    setTimeout(function() {
+        document.getElementById("order-popup").classList.remove("show");
+    }, 2500);
+};
+</script>
+{% endif %}
+
+{% endblock %}
