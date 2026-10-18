@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Receipt | Desi Pizza{% endblock %}
+
+{% block content %}
+
+<section class="receipt-page">
+
+    <div class="receipt">
+
+        <div class="receipt-header">
+            <h1>🍕 Desi Pizza</h1>
+            <p>Order Receipt</p>
+        </div>
+
+        <hr>
+
+        <div class="customer-details">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <p><strong>Address:</strong> {{ address }}</p>
+            <p><strong>Payment:</strong> {{ payment }}</p>
+        </div>
+
+        <hr>
+
+        <h2>Order Details</h2>
+
+        {% for order in orders %}
+
+        <div class="receipt-item">
+            <div>
+                <strong>{{ order.pizza }}</strong>
+                <p>Size: {{ order.size }}</p>
+            </div>
+
+            <span>${{ "%.2f"|format(order.price|float) }}</span>
+        </div>
+
+        {% endfor %}
+
+        <hr>
+
+        <div class="receipt-total">
+            <strong>Total</strong>
+            <strong>${{ "%.2f"|format(total|float) }}</strong>
+        </div>
+
+        <div class="receipt-thanks">
+            <p>Thank you for ordering from Desi Pizza! ❤️</p>
+            <p>Enjoy your meal 🍕</p>
+        </div>
+
+        <button onclick="window.print()" class="print-btn">
+            🖨️ Print Receipt
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}
