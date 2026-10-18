@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}About Us | Desi Pizza{% endblock %}
+
+{% block content %}
+
+<section class="about-hero">
+    <div>
+        <p class="about-tag">WELCOME TO DESI PIZZA</p>
+        <h1>Where Every Slice Has a <span>Desi Twist</span> 🍕</h1>
+        <p>
+            We bring together delicious pizza, fresh ingredients and
+            bold Desi flavours to create something everyone can enjoy.
+        </p>
+        <a href="{{ url_for('menu') }}" class="btn">Explore Our Menu</a>
+    </div>
+</section>
+
+
+<section class="about-story">
+
+    <div class="story-text">
+        <p class="about-label">OUR STORY</p>
+        <h2>Made With Passion, Served With Flavour</h2>
+
+        <p>
+            Desi Pizza was created to give pizza lovers something
+            different. Our menu combines familiar pizza favourites
+            with flavours inspired by Desi food.
+        </p>
+
+        <p>
+            From preparing the ingredients to serving the final pizza,
+            we focus on making every order fresh, tasty and enjoyable.
+        </p>
+    </div>
+
+    <div class="story-box">
+        <div class="story-icon">🍕</div>
+        <h3>Freshly Made</h3>
+        <p>
+            Fresh ingredients and carefully prepared pizzas
+            for every order.
+        </p>
+    </div>
+
+</section>
+
+
+<section class="about-features-section">
+
+    <p class="about-label">WHY DESI PIZZA?</p>
+    <h2>What Makes Us Different?</h2>
+
+    <div class="about-features">
+
+        <div>
+            <span>🥬</span>
+            <h3>Fresh Ingredients</h3>
+            <p>
+                We use fresh ingredients to give our pizzas
+                great taste and quality.
+            </p>
+        </div>
+
+        <div>
+            <span>🌶️</span>
+            <h3>Bold Flavours</h3>
+            <p>
+                Enjoy delicious flavours inspired by Desi
+                cooking and spices.
+            </p>
+        </div>
+
+        <div>
+            <span>❤️</span>
+            <h3>Made With Care</h3>
+            <p>
+                Every order is prepared with care so customers
+                can enjoy a great meal.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about-info">
+
+    <div>
+        <span>🍕</span>
+        <h3>Our Food</h3>
+        <p>Fresh pizzas and tasty sides for everyone.</p>
+    </div>
+
+    <div>
+        <span>🛒</span>
+        <h3>Easy Ordering</h3>
+        <p>Choose your favourite items and add them to your cart.</p>
+    </div>
+
+    <div>
+        <span>⭐</span>
+        <h3>Our Goal</h3>
+        <p>To make every customer enjoy their Desi Pizza experience.</p>
+    </div>
+
+</section>
+
+{% endblock %}
